@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Add New Product</a></li>
+            <li><a href="#">Track Products</a></li>
+            <li><a href="#">Message</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Team Members</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+        <div class="quick-actions">
+            <h3>Quick Actions</h3>
+            <ul>
+                <li><a href="#">Export Data</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Manufacturer Dashboard</h1>
+            <p>15th of August, 2024</p>
+            <div class="user-info">
+                <img src="user.png" alt="User Image">
+                <span>PHL Limited</span>
+                <span>phl@gmail.com</span>
+            </div>
+        </header>
+
+        <section class="dashboard">
+            <div class="charts">
+                <div class="chart-container">
+                    <h2>Sales Trend</h2>
+                    <canvas id="salesTrendChart"></canvas>
+                    <p>Chart summary: The line graph shows the sales trend of all the PHL Limited products for each day of the week.</p>
+                </div>
+                <div class="chart-container">
+                    <h2>Market Share</h2>
+                    <canvas id="marketShareChart"></canvas>
+                    <p>Chart summary: The pie chart describes the market share of PHL Limited for the week.</p>
+                </div>
+                <div class="chart-container">
+                    <h2>Top 5 products by sales</h2>
+                    <canvas id="topProductsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2>Distribution Map</h2>
+                    <img src="map.png" alt="Distribution Map">
+                    <p>Map showing the regions where drugs are being distributed.</p>
+                </div>
+                <div class="chart-container">
+                    <h2>Flowchart</h2>
+                    <img src="flowchart.png" alt="Flowchart">
+                    <p>Flowchart showing the path of PHL Limited products from the manufacturer to the end consumer.</p>
+                </div>
+            </div>
+
+            <div class="recent-scans">
+                <h2>Recent Scans</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Dates</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pdt 1</td>
+                            <td>01/05/2024</td>
+                            <td>Ikeja, Lagos State</td>
+                            <td>Original</td>
+                        </tr>
+                        <!-- Add other rows here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="product-details">
+                <h2>Product Details</h2>
+                <div class="tabs">
+                    <button class="tab-button active" data-product="Pdt 1">Pdt 1</button>
+                    <button class="tab-button" data-product="Pdt 2">Pdt 2</button>
+                    <button class="tab-button" data-product="Pdt 3">Pdt 3</button>
+                    <button class="tab-button" data-product="Pdt 4">Pdt 4</button>
+                    <button class="tab-button" data-product="Pdt 5">Pdt 5</button>
+                </div>
+                <div class="product-info">
+                    <p>Manufactured date: <span id="manufactureDate">01/05/2024</span></p>
+                    <p>Expiry Date: <span id="expiryDate">01/05/2029</span></p>
+                    <p>Batch No: <span id="batchNo">BBCC24263</span></p>
+                    <p>Carton: <span id="carton">45 pieces each</span></p>
+                    <p>NAFDAC Reg No: <span id="nafdac">04-6674</span></p>
+                    <p>Sales Figure: <span id="salesFigure">2,721 in Aug</span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
